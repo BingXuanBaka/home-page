@@ -1,15 +1,19 @@
 {
-  "name": "untitled3",
+  "name": "Home-Page",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist -r https://github.com/BingXuanOwO/home-page -b gh-pages"
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "gh-pages": "^4.0.0",
+    "vue": "^3.2.13",
+    "vue-cli": "^2.9.6"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
