@@ -2,6 +2,7 @@
   <back-ground></back-ground>
   <page-home :title=title :subTitle=subTitle :links=links />
   <page-description :description="description" />
+  <page-friend-link :friendLinks="friendLinks"/>
   <page-footer :footerContent="footerContent" />
 </template>
 
@@ -10,6 +11,7 @@
 
 import PageHome from './pages/PageHome.vue'
 import PageDescription from './pages/PageDescription.vue'
+import PageFriendLink from './pages/PageFriendLink.vue'
 import PageFooter from './pages/PageFooter.vue'
 
 import BackGround from './components/BackGround.vue'
@@ -20,6 +22,7 @@ export default {
   components: {
     PageHome,
     PageDescription,
+    PageFriendLink,
     PageFooter,
     BackGround
   },
@@ -57,6 +60,14 @@ export default {
           '接下来嘛...我也不知道该说些什么了xwx',
           '总之...我就是个死废物（）'
       ],
+      friendLinks : [
+        {
+          title:'凯莫·琼小羽',
+          url:'https://k.catkai.net/',
+          imageUrl:'https://s2.loli.net/2022/05/20/UiM9JeSusCDR4Fd.jpg',
+        }
+      ]
+      ,
       footerContent : [
         {
           content : '冰轩OwO@2022',
