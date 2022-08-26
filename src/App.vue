@@ -65,7 +65,11 @@ export default {
           title:'凯莫·琼小羽',
           url:'https://k.catkai.net/',
           imageUrl:'https://s2.loli.net/2022/05/20/UiM9JeSusCDR4Fd.jpg',
-        }
+        },
+        {
+          title:'某猫',
+          url:'https://k.catkai.net/',
+        },
       ]
       ,
       footerContent : [
