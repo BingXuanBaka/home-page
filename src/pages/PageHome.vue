@@ -57,14 +57,14 @@ export default {
   border-radius: 13px;
   margin: 3px;
   position: relative;
-  color: #ffffff;
+  color: #fff;
   opacity: .5;
   text-decoration: none ;
 }
 #p-home .links a:after{
   content: "";
-  background: #67a4e5;
-  opacity: .05;
+  background: #556e89;
+  opacity: .1;
   position: absolute;
   top:0;
   left: 0;
@@ -74,7 +74,7 @@ export default {
   transition: 0.3s;
 }
 #p-home .links a:hover:after{
-  opacity: .15;
+  opacity: .2;
   border-radius: 7px;
 }
 #p-home .links a:hover{
