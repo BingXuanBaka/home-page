@@ -67,8 +67,8 @@ export default {
           imageUrl:'https://s2.loli.net/2022/05/20/UiM9JeSusCDR4Fd.jpg',
         },
         {
-          title:'某猫',
-          url:'https://k.catkai.net/',
+          title:'某猫的个人Blog',
+          url:'https://blog.moumao.top/',
         },
       ]
       ,
