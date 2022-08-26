@@ -88,6 +88,7 @@ export default {
     #p-links ul li span{
         line-height: 35px;
         padding: 0 4px;
+        padding-left: 4.5px;
     }
     #p-links ul li img{
         height: 35px;
