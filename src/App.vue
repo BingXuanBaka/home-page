@@ -102,6 +102,11 @@ export default {
           imageUrl:'https://blog.southfox.me/favicon.png',
           description:'',
         },
+        {
+          title:'FurLibrary',
+          url:'https://www.furrybbs.net/',
+          description:'',
+        },
         
       ]
       ,
