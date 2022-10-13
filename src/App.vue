@@ -36,18 +36,24 @@ export default {
       links : [
         {
           index : 0,
+          name : 'Blog',
+          href : 'https://blog.bing-xuan.cn',
+          description : '我也不知道什么时候才会更新的blog'
+        },
+        {
+          index : 1,
           name : 'Github',
           href : 'https://github.com/BingXuanOwO',
           description : '全球最大同性交流网站（bushi）'
         },
         {
-          index: 1,
+          index: 2,
           name: 'BiliBili',
           href: 'https://space.bilibili.com/286707275/',
           description: '一个我也不知道什么时候才会更一期新视频的地方'
         },
         {
-          index: 2,
+          index: 3,
           name: '网易云音乐',
           href: 'https://music.163.com/#/user/home?id=1320983215',
           description: '网 抑 云 阴 乐（bushi）'
@@ -70,6 +76,12 @@ export default {
           title:'某猫的个人Blog',
           url:'https://blog.moumao.top/',
         },
+        {
+          title:'Allenyou’s Blog',
+          url:'https://www.allenyou.wang/',
+          imageUrl:'https://avatar.sourcegcdn.com/avatar/59b2fbdd507a84fe181b0af3e4ad7be3',
+        },
+        
       ]
       ,
       footerContent : [
