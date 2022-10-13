@@ -71,30 +71,36 @@ export default {
           title:'凯莫·琼小羽',
           url:'https://k.catkai.net/',
           imageUrl:'https://s2.loli.net/2022/05/20/UiM9JeSusCDR4Fd.jpg',
+          description:'',
         },
         {
           title:'某猫的个人Blog',
           url:'https://blog.moumao.top/',
+          description:'',
         },
         {
           title:'Allenyou’s Blog',
           url:'https://www.allenyou.wang/',
           imageUrl:'https://avatar.sourcegcdn.com/avatar/59b2fbdd507a84fe181b0af3e4ad7be3',
+          description:'稻花香里说丰年，听取WA声一片',
         },
         {
           title:'迷失的小K',
           url:'http://www.kclub.fun/',
           imageUrl:'https://cdn.kclub.fun/wp-content/uploads/2022/08/1660213171-colorful.jpg',
+          description:'Just for fun',
         },
         {
-          title:'歪皮的个人博客',
+          title:'歪皮',
           url:'https://www.gene-yp.com/',
           imageUrl:'https://pic.gene-yp.com/i/2022/07/25/c2axpo.jpeg',
+          description:'Just love, understanding and positivity',
         },
         {
           title:'狐狸反走矣',
           url:'https://blog.southfox.me/',
           imageUrl:'https://blog.southfox.me/favicon.png',
+          description:'',
         },
         
       ]

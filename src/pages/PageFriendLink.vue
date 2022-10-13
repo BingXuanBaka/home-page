@@ -2,7 +2,7 @@
     <div id="p-links" class="hide">
         <h2>友情链接</h2>
         <ul>
-            <a v-for="link in friendLinks" :key="link.id" :href="link.url">
+            <a v-for="link in friendLinks" :key="link.id" :href="link.url" :title="link.description">
                 <li>
                     <img v-if="link.imageUrl" :src="link.imageUrl"/>
                     <span>{{ link.title }}</span>
