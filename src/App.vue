@@ -97,7 +97,7 @@ export default {
           description:'Just love, understanding and positivity',
         },
         {
-          title:'狐狸反走矣',
+          title:'Foxhole',
           url:'https://blog.southfox.me/',
           imageUrl:'https://blog.southfox.me/favicon.png',
           description:'',
