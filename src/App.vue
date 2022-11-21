@@ -113,7 +113,7 @@ export default {
       footerContent : [
         {
           content : '冰轩OwO@2022',
-          href : 'https://www.bing-xuan.xyz'
+          href : 'https://www.bing-xuan.cn'
         },
         {
           content : '萌ICP备20223354号',
