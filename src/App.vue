@@ -118,9 +118,6 @@ export default {
         {
           content : '萌ICP备20223354号',
           href : 'https://icp.gov.moe/?keyword=20223354'
-        },
-        {
-          content : 'Powered by Vue',
         }
       ]
     }
