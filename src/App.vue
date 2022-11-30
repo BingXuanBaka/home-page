@@ -147,9 +147,22 @@ export default {
 </script>
 
 <style>
+
+/*   */
+*{
+  backdrop-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+#document-background{
+  opacity: 0;
+}
+/*   */
+
 body{
   background: #494949;
 }
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
