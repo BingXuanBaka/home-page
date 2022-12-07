@@ -148,17 +148,6 @@ export default {
 
 <style>
 
-/*   */
-*{
-  backdrop-filter: grayscale(1);
-  filter: grayscale(1);
-}
-
-#document-background{
-  opacity: 0;
-}
-/*   */
-
 body{
   background: #494949;
 }
