@@ -107,6 +107,12 @@ export default {
           url:'https://www.furrybbs.net/',
           description:'',
         },
+        {
+          title:'中二病晚期の物語',
+          url:'https://imfurry.com',
+          imageUrl:'https://cdn-imfurry.imfurry.com/avatar/zebwqFurryAvatar.png',
+          description:'一只狐狸敲出的一个奇迹',
+        },
         
       ]
       ,
