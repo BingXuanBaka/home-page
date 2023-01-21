@@ -161,8 +161,6 @@ export class Firework {
             console.log(this.fireUpHeight + ',' +this.y)
         }
         this.fireupSpeed = this.fireupSpeed > (this.speed * 0.975) ? this.fireupSpeed * 0.9980 : this.fireupSpeed * 0.988 ;
-        console.log(this.fireupSpeed)
-        // 
     }
 }
 

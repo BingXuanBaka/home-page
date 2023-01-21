@@ -16,7 +16,7 @@ import PageFooter from './pages/PageFooter.vue'
 
 import BackGround from './components/BackGround.vue'
 
-const {getIsNewYear,Firework} = require('./functions')
+const {getIsNewYear,Firework,parsingRemainTime} = require('./functions')
 export default {
   name: 'App',
   components: {
@@ -31,7 +31,8 @@ export default {
   data (){
     return{
       title : '好的，这里是冰轩',
-      subTitle : '只是一只死废物',
+      // subTitle : '只是一只死废物',
+      subTitle:"距离新春还剩",
       blurTitle : 'shhh... let\'s not leak our hard work',
       links : [
         {
@@ -221,9 +222,9 @@ export default {
       // 获取当前时间
       let timeNow = Date.now()
 
-      this.time= timeNow
-      this.isNewYear= getIsNewYear(timeNow,newYearTime)
-      this.remainTime=newYearTime - timeNow + 1000
+      this.time = timeNow
+      this.isNewYear = getIsNewYear(timeNow,newYearTime)
+      this.remainTime = newYearTime - timeNow + 1000
 
     },300);
 
@@ -233,11 +234,13 @@ export default {
 
     let checkIsNewYearInterval = setInterval(()=>{
       if(this.isNewYear){
-        this.randomFirework()
+        this.randomFirework();
+        this.subTitle = "新春快乐!"
         clearInterval(checkIsNewYearInterval)
+        return;
       }
+      this.subTitle = "距离新春还剩 " + parsingRemainTime(this.remainTime)
     },300)
-    this.randomFirework()
   },
 
 }
