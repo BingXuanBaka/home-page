@@ -16,7 +16,7 @@ import PageFooter from './pages/PageFooter.vue'
 
 import BackGround from './components/BackGround.vue'
 
-
+const {getIsNewYear,Firework} = require('./functions')
 export default {
   name: 'App',
   components: {
@@ -125,7 +125,11 @@ export default {
           content : '萌ICP备20223354号',
           href : 'https://icp.gov.moe/?keyword=20223354'
         }
-      ]
+      ],
+      time:new Date(),
+      isNewYear:false,
+      remainTime:0,
+      fireworks:[]
     }
 
   },
@@ -135,7 +139,69 @@ export default {
     },
     onBlur(){
       document.title = this.blurTitle;
+    },
+
+    // functions modified from https://github.com/BingXuanOwO/Spring-Festival-Countdown
+    // 随机烟花部分
+    randomFirework (){
+      setTimeout(async () => {
+        // 非离屏状态
+        if(!document.hidden){
+          // 随机 1 - 3 个
+          let fireworkCount = Math.round(Math.random() * 2);
+          for (let index = 0; index < fireworkCount; index++) {
+            let x = Math.random() * Math.round(window.innerWidth * 0.8) + Math.round(window.innerWidth * 0.1)
+            let y = Math.random() * Math.round(window.innerHeight * 0.8) + Math.round(window.innerHeight * 0.1)
+            await this.addFirework(Math.round(x),Math.round(y))
+          }
+        }
+
+        this.randomFirework();
+      },  Math.round(Math.random() * 500 + 100));
+    },
+
+    // 添加烟花
+    addFirework(x,y){
+      return new Promise((resolve)=>{
+        const ctx = document.querySelector("canvas").getContext("2d");
+
+        let fireworks = [...this.fireworks]
+
+        fireworks.push(new Firework(x,y,ctx))
+        this.fireworks = fireworks
+        resolve() 
+        
+      });
+    },
+
+    drawTicks(){
+      // 清除画布
+      const canvas = document.querySelector("canvas");
+      if(!document.hidden && canvas != null){
+        const ctx = canvas.getContext("2d")
+        ctx.fillStyle = 'rgba(0,0,0,0.07)'
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+
+        // 绘制每个烟花
+        if( this.fireworks !== 0 ){
+
+          this.fireworks.forEach((element,index)=>{
+            element.onFireUping ? element.drawOnFireUp() : element.drawFireworks() ;
+
+            // 当烟花透明度降到0时删掉
+            if(element.alpha < 0){
+              let fireworks = [...this.fireworks]
+              fireworks.splice(index,1)
+              this.fireworks = fireworks
+            }
+          })
+        }
+      }
+
+      requestAnimationFrame(this.drawTicks)
     }
+
   },
   mounted(){
     document.title = this.title;
@@ -144,18 +210,46 @@ export default {
     }
 
     window.addEventListener("focus",this.onFocus);
-  }
-}
-  setInterval(() => {
 
-  },100)
+    
+    // 硬编码新年时间,当前不清楚能干这事的api
+    const newYearTime = new Date(2023,0,22,0,0,0).getTime();
+
+
+    // 循环设置data
+    setInterval(() => {
+      // 获取当前时间
+      let timeNow = Date.now()
+
+      this.time= timeNow
+      this.isNewYear= getIsNewYear(timeNow,newYearTime)
+      this.remainTime=newYearTime - timeNow + 1000
+
+    },300);
+
+
+    this.drawTicks()
+
+
+    let checkIsNewYearInterval = setInterval(()=>{
+      if(this.isNewYear){
+        this.randomFirework()
+        clearInterval(checkIsNewYearInterval)
+      }
+    },300)
+    this.randomFirework()
+  },
+
+}
+
 
 </script>
 
 <style>
 
 body{
-  background: #494949;
+  background-color: #070707;
+
 }
 
 #app {
