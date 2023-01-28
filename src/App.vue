@@ -30,7 +30,7 @@ export default {
   data (){
     return{
       title : '好的，这里是冰轩',
-      subTitle : '只是一只死废物',
+      subTitle : '10000%的废物，0%的成功。',
       blurTitle : 'shhh... let\'s not leak our hard work',
       links : [
         {
